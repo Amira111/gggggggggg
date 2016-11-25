@@ -13,5 +13,5 @@ $row = mysqli_fetch_assoc($result);
 
 echo "".$row["id"]." ".$row["name"]." ".$row["nbuser"]."";
 }
-$conn->close();
+mysqli_close($conn);
 ?>
