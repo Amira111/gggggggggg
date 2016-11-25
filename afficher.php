@@ -25,4 +25,41 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error creating table: " . mysqli_error($conn);
 }
+
+$sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
+VALUES ('Android', '100', '23','100')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
+VALUES ('iOS', '200', '20','200')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
+VALUES ('BlackBerry', '70', '21','70')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
+
+$sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
+VALUES ('WindowsPhone', '60', '20','60')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+
+
 ?>
