@@ -28,7 +28,7 @@ if (mysqli_query($conn, $sql)) {
 
 $sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
 VALUES ('Android', '100', '23','100')";
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn,$sql)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -36,7 +36,7 @@ if ($conn->query($sql) === TRUE) {
 
 $sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
 VALUES ('iOS', '200', '20','200')";
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn,$sql)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -44,7 +44,7 @@ if ($conn->query($sql) === TRUE) {
 
 $sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
 VALUES ('BlackBerry', '70', '21','70')";
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn,$sql)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -54,12 +54,12 @@ if ($conn->query($sql) === TRUE) {
 
 $sql = "INSERT INTO MyGuests (name, nbuser, nbversion,nbsmart)
 VALUES ('WindowsPhone', '60', '20','60')";
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn,$sql)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$conn->close();
+mysqli_close($conn);
 
 
 ?>
