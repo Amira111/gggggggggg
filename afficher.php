@@ -1,12 +1,9 @@
 <?php
-define('SERVER_NAME', getenv('MYSQL_HOST'));
-define('USERNAME', getenv('MYSQL_USER'));
-define('PASSWORD', getenv('MYSQL_PASSWORD'));
-define('DB_NAME', getenv('MYSQL_DATABASE'));
-$servername = "172.30.170.107";
-$username = "amira";
-$password = "amira";
-$dbname = "logiciels";
+
+$servername = getenv('MYSQL_HOST');
+$username = getenv('MYSQL_USER') ;
+$password =  getenv('MYSQL_PASSWORD');
+$dbname = getenv('MYSQL_DATABASE');
 // Create connection
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 // Check connection
