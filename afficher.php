@@ -1,10 +1,14 @@
 <?php
+define('SERVER_NAME', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+define('USERNAME', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+define('PASSWORD', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+define('DB_NAME', getenv('OPENSHIFT_MYSQL_DB_HOST'));
 $servername = "172.30.170.107";
 $username = "amira";
 $password = "amira";
 $dbname = "logiciels";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
+$conn = mysqli_connect(SERVER_NAME,USERNAME,PASSWORD,DB_NAME);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
