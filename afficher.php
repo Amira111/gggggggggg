@@ -4,8 +4,11 @@ $servername = "172.30.170.107";
 $username = getenv($MYSQL_USER) ;
 $password =  getenv($MYSQL_PASSWORD);
 $dbname = getenv($MYSQL_DATABASE);
+echo $username;
+echo $password;
+echo $dbname;
 // Create connection
-$conn = mysqli_connect($servername,$username,$password,$dbname);
+$conn = mysqli_connect($servername,'amira,'amira','logiciel');
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
