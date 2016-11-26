@@ -8,7 +8,7 @@ $username = "amira";
 $password = "amira";
 $dbname = "logiciels";
 // Create connection
-$conn = mysqli_connect(SERVER_NAME,USERNAME,PASSWORD,DB_NAME);
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
