@@ -1,9 +1,9 @@
 <?php
 
 $servername = "172.30.170.107";
-$username = getenv('MYSQL_USER') ;
-$password =  getenv('MYSQL_PASSWORD');
-$dbname = getenv('MYSQL_DATABASE');
+$username = getenv('$MYSQL_USER') ;
+$password =  getenv('$MYSQL_PASSWORD');
+$dbname = getenv('$MYSQL_DATABASE');
 // Create connection
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 // Check connection
