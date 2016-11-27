@@ -3,17 +3,9 @@ define('DB_HOST', getenv('OPENSHIFT_DB_HOST'));
 define('DB_USER',getenv('OPENSHIFT_DB_USERNAME'));
 define('DB_PASS',getenv('OPENSHIFT_DB_PASSWORD'));
 define('DB_NAME',getenv('OPENSHIFT_DB_DBNAME'));
-echo 'jhhhhh'.DB_HOST."".DB_USER."".DB_PASS;
-    $servername = "172.30.170.107";
-$username = getenv('MYSQL_USER') ;
-$password =  getenv('MYSQL_PASSWORD');
-$dbname = getenv('MYSQL_DATABASE');
-echo($_ENV["OPENSHIFT_APP_NAME"]);
-echo $username;
-echo $password;
-echo $dbname;
+
 // Create connection
-$conn = mysqli_connect($servername,'amira','amira','logiciels');
+$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAM);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
