@@ -1,7 +1,7 @@
 <?php
-define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
-define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
-define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+define('DB_HOST', getenv('OPENSHIFT_MYSQL_HOST'));
+define('DB_USER',getenv('OPENSHIFT_MYSQL_USERNAME'));
+define('DB_PASS',getenv('OPENSHIFT_MYSQL_PASSWORD'));
 define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
 echo 'jhhhhh'.DB_HOST."".DB_USER."".DB_PASS;
     $servername = "172.30.170.107";
