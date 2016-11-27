@@ -34,7 +34,7 @@ if (mysqli_query($conn, $sql)) {
 $sql = "INSERT INTO os (name, nbuser, nbversion,nbsmart)
 VALUES ('Android', '100', '23','100')";
 if (mysqli_query($conn,$sql)) {
-    echo "New record created successfully";
+    echo "New record created successfullyy";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
