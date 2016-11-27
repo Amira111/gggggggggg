@@ -1,15 +1,11 @@
 <?php
-define('SERVER_NAME', getenv('MYSQL_HOST'));
-define('USERNAME', getenv('MYSQL_USER'));
-define('PASSWORD', getenv('MYSQL_PASSWORD'));
-define('DB_NAME', getenv('MYSQL_DATABASE'));
-$servername = "172.30.170.107";
-$username = "amira";
-$password = "amira";
-$dbname = "logiciels";
+define('DB_HOST', getenv('OPENSHIFT_DB_HOST'));
+define('DB_USER',getenv('OPENSHIFT_DB_USERNAME'));
+define('DB_PASS',getenv('OPENSHIFT_DB_PASSWORD'));
+define('DB_NAME',getenv('OPENSHIFT_DB_DBNAME'));
 
 // Create connection
-$conn = mysqli_connect(SERVER_NAME,USERNAME , PASSWORD, DB_NAME);
+$conn = mysqli_connect(DB_HOST,DB_USER, DB_PASS,DB_NAME);
 $sql = "SELECT * FROM os where name like 'Android'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
