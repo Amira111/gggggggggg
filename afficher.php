@@ -8,7 +8,7 @@ echo $username;
 echo $password;
 echo $dbname;
 // Create connection
-$conn = mysqli_connect($servername,'amira','amira','logiciel');
+$conn = mysqli_connect($servername,'amira','amira','logiciels');
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
